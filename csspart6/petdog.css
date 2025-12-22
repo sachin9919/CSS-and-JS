@@ -1,0 +1,34 @@
+h2{
+    color:rgba(230, 153, 59, 0.685);
+    text-align: centre;
+}
+h1{
+    text-align: centre;
+}
+span{
+    color: rgba(74, 91, 222, 0.895);
+    text-shadow: 0cqmax;
+}
+#pets{
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;/*VERY IMPORTANT MAKE EVERYTHING IN PAGE AT APPROPRIATE DISTANCE*/
+}
+.card{
+    width: 500px;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;              /* Creates equal spacing around the image */
+    margin: 0 50px;
+}
+.card img {
+  width: 100%; /* optional, ensures image fits container */
+  height: auto;
+  border-radius: 15px;
+}
+@media(max-width:375px){
+    #pets{
+        flex-wrap: wrap;
+    }
+}
