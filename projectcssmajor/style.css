@@ -1,0 +1,233 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: black;
+    color:antiquewhite;
+    overflow: hidden;  /* KEWAL ISLIYE KIYA TAKI STARTING MEIN KUCH BHI SCROLLLABLE NA HO BAD MEIN JO HISSA SCOLLABLE KARNA HAI KAR DENGE ALAG SE */
+}
+.main{
+    display: flex;
+    height: 100vh; /*SINCE WE WANT FULL HEIGHT OF WEB PAGE FOR MAIN DIV */
+    padding: 0.65rem;
+}
+.sidebar{
+    width:340px;
+    border-radius: 1rem; /*1rem=16px  AUR REM WEBSITE KO ESPONSIVE BANATA HAI */
+    background-color: black;
+    margin-right: 0.5rem;
+}
+.main-content{
+    flex: 1; /* matlab jisko jitni jagah chahiye de do baki bacchi jagah mujhe de do */
+    border-radius: 1rem; 
+    overflow: auto; /* for scroolbar */
+    background-color: #121212;
+    padding: 0 1.5rem 0 1.5rem;   /* khud dekho isse kya hoga hata ke aur laga ke CARD KO OBSERVE KARO */
+}
+.music-player {
+    position:fixed;
+    bottom: 0;   /*since bottom pe fix hai */
+    height: 50px;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.nav {
+    background-color: #121212;
+    border-radius:1rem; 
+    display:flex;
+    flex-direction: column; /* isse jo home aur search hai wo phir se vertical ho jayenge */
+    justify-content: center; /* isse content jo centre mein chahiyye wo ho jayega*/
+    height: 100px;
+    padding:0.5rem 0.75rem ;
+}
+.nav-option {
+    line-height:2.5rem; 
+    padding:0.5rem 0.75rem;
+}
+.nav-option:hover {
+    opacity:1; /* isse se hover karne pe changes dikheenge  html mein bhi set kar rakha hai*/
+}
+.nav-option i {
+    font-size:1.25rem;
+}
+.nav-option a {
+    font-size: 1rem;
+    margin-left: 1rem; /* icon aur text ke bich mein spacing de dega */
+}
+.library {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%; /* since niche ki jo bachi hui hgt hai wo bhi lib ko mile */
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+.options {
+    display: flex;
+    justify-content: space-between; /* isse libry ka icon left aur baki dono right chale jayeng */
+    align-items:center;
+
+}
+.lib-options img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+.icons {
+    font-size: 1.25rem;
+    display: flex;
+}
+.icons i {
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+.box {
+    background-color: #232323;
+    height: 7rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem  0  1.75rem  0;
+    padding: 1rem 1.25rem;
+}
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 550;
+}
+.box-p2 {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+.badge {
+    background-color: white;
+    border: none;
+    border-radius: 50rem;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit content; /* isse jo box ke andar ka content hai fit ho jayega*/
+}
+dark-badge{
+    background-color: black;
+    color: antiquewhite;
+}
+.sticky-nav{
+    position:sticky;
+    border-radius: 2rem;
+    width: 100%;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.532);
+    display: flex;
+    justify-content: space-between; /* jo bhi content hoga page mein uske bich space aa jayegi */
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    z-index:1000;  /* VERY IMP JAISE HUM SCROOL KARTE AHIN TO JO CARD PE TEXT LIKHA HAI WO BHI NAV PE DIKH RAHA HAI ISLIYE USSE CHUPANE KE LIYE YE KIYA */
+}
+.nav-option{
+    margin-left: 0.75rem;
+}
+.nav-user{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem;
+
+}
+ @media (max-width: 1000px){  /* iski help se screen size bada chota karne se kuch button ayenge ajyenge ajise ki explore aur forward button */
+    .hide{
+        display:none;
+    }
+}
+.card{
+    background-color:#dec3c3;
+    color: black;
+    width: 150px;
+    border-radius: 1rem;
+    margin-left: 1.5rem;
+    padding: 1rem;  /* khud dekho isse kya hoga hata ke aur laga ke */
+}
+.im{
+    width: 100%;
+    border-radius: 1.5rem; 
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap; /*isse cards agar ajag nahi ahi to ek line mein choote hokar nahi ayenge agli line mein chale jayenge */ 
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+.footer{       /* VERY IMP THIS AND ITS BELOW CSS STYLING */           
+    height: 300px;
+    display: flex;
+    align-items: center;  /*basically line ko centre pe layenge ye aur iske niche wali property */
+    justify-content: center;
+}
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+.music-player{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.album{
+    width: 25%;
+}
+.player{
+    width: 50%;
+}
+.controls{
+    width: 25%;
+}
+.player-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-control-icon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 75%;
+    appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: antiquewhite;
+    border-radius: 100px;
+    height: 0.21rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px; /*shift up*/
+}
